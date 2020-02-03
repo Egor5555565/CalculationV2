@@ -1,0 +1,10 @@
+header{
+	/* Включаем режим Flexbox. */
+	display: flex; 
+	
+	/* Распределяем элементы внутри шапки */
+	justify-content: space-between;
+
+	/* Выравниваем элементы вертикально по центру. */
+	align-items: center;
+}

@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalculationsComponent implements OnInit {
 
-  constructor() { }
+	ValueComponent: number = 0;
 
-  ngOnInit() {
-  }
+	constructor() { }
 
+	ngOnInit() {
+	}
+
+	HideShowClick(value){
+		this.ValueComponent = value;
+	}
 }

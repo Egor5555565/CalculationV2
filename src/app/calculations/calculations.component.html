@@ -1,1 +1,14 @@
-<p>calculations works!</p>
+<div id="menu">
+    <span (click)="HideShowClick(1)"> this </span>
+    <div><a href="#"> Все байки </a></div>
+    <div><a href="#"> Байки по автору </a></div>
+    <div><a href="#"> Байки по теме </a></div>
+    <div><a href="#"> Популярные разделы </a></div>
+    <div><a href="#"> Последние байки </a></div>
+</div>
+
+<content>
+	<ng-template [ngIf]="ValueComponent == 0">
+		<app-simple-calculation></app-simple-calculation>
+	</ng-template>
+</content>
