@@ -25,9 +25,10 @@
 }
 
 .coping {
+	border-radius: 50px;
 	height: 20px;
 	padding: 20px;
-	width: 10%;
+	width: 11%;
 }
 
 .button:hover, .bigbutton:hover, .coping:hover {
@@ -48,6 +49,7 @@
 	height: 20px;
 	padding: 20px;
 	text-align: right;
+	white-space: nowrap;
 }
 
 .warning {

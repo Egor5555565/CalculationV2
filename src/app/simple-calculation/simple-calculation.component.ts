@@ -49,7 +49,7 @@ export class SimpleCalculationComponent implements OnInit {
 	add(value, space = 0) {
 		let text = document.getElementById("coping_text");
 		if(text.innerHTML == "0"){
-			if((space) || (value == ".")){
+			if(((space) && (value != "-")) || (value == ".")){
 				return;
 			}
 			else{
@@ -79,9 +79,22 @@ export class SimpleCalculationComponent implements OnInit {
 		}
 	}
 
-	delete_text() {
+	delete_all_text() {
 		let text = document.getElementById("coping_text");
 		text.innerHTML = "0";
+	}
+
+	delete_text() {
+		let text = document.getElementById("coping_text");
+		if(text.innerHTML[text.innerHTML.length - 1] == " "){
+			text.innerHTML = text.innerHTML.slice(0, text.innerHTML.length - 3);
+		}
+		else{
+			text.innerHTML = text.innerHTML.slice(0, text.innerHTML.length - 1);
+			if(text.innerHTML == ""){
+				text.innerHTML = "0";
+			}
+		}
 	}
 
 	summ_text() {
