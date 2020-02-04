@@ -4,7 +4,7 @@
 <p> {{ value3 }} </p>
 -->
 <div class = "container">
-	<div class="display" id="coping_text"> 0 </div>
+	<div class="display" id="coping_text">0</div>
 	<div class="coping" (click)="coping()"> copy </div>
 	<br>
 	<div class="button"> C </div>
@@ -29,4 +29,7 @@
 	<br>
 	<div class="bigbutton" (click)="add(0)"> 0 </div>
 	<div class="bigbutton" (click)="summ_text()"> = </div>
+	<ng-template [ngIf]="warning">
+		<div class="warning"> Ошибка ввода! </div>
+	</ng-template>
 </div>

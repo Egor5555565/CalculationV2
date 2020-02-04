@@ -10,6 +10,7 @@ export class SimpleCalculationComponent implements OnInit {
 	value1 : number = 0;
 	value2 : number = 0;
 	value3 : number = 10;
+	warning : Boolean = false;
 
 	constructor() { }
 
@@ -47,7 +48,7 @@ export class SimpleCalculationComponent implements OnInit {
 
 	add(value, space = 0) {
 		let text = document.getElementById("coping_text");
-		if(text.innerHTML == 0){
+		if(text.innerHTML == "0"){
 			if((space) || (value == ".")){
 				return;
 			}
@@ -85,6 +86,13 @@ export class SimpleCalculationComponent implements OnInit {
 
 	summ_text() {
 		let text = document.getElementById("coping_text");
-		text.innerHTML = eval(text.innerHTML);
+		try{
+			text.innerHTML = eval(text.innerHTML);
+			this.warning = false;
+		}
+		catch (SyntaxError) {
+			this.warning = true;
+		}
+		/*text.innerHTML = eval(text.innerHTML);*/
 	}
 }

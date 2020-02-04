@@ -49,3 +49,14 @@
 	padding: 20px;
 	text-align: right;
 }
+
+.warning {
+	border-width: 2px;
+	border-color: #000;
+	border-style: solid;
+	background-color: black;
+	border-radius: 10px;
+	background-color: red;
+	color: yellow;
+	text-align: center;
+}
