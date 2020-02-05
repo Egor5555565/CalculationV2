@@ -33,3 +33,22 @@
 		<div class="warning"> Ошибка ввода! </div>
 	</ng-template>
 </div>
+
+<div>
+	<button id="myBtn" (click)="ModelView()">Открыть окно</button>
+</div>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close" (click)="ModelShow()">&times;</span>
+      <h2>Шапка модального окна</h2>
+    </div>
+    <div class="modal-body">
+      <p>Какой-то текст в теле модального окна</p>
+      <p>Ещё другой текст...</p>
+    </div>
+    <div class="modal-footer">
+      <h3>Футер модального окна</h3>
+    </div>
+  </div>
+</div>

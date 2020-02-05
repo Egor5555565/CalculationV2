@@ -108,4 +108,16 @@ export class SimpleCalculationComponent implements OnInit {
 		}
 		/*text.innerHTML = eval(text.innerHTML);*/
 	}
+
+	/* For Modev Window start */
+	ModelView() {
+		let modal = document.getElementById('myModal');
+		modal.style.display = "block";
+	}
+
+	ModelShow() {
+		let modal = document.getElementById('myModal');
+		modal.style.display = "none";
+	}
+	/* For Modev Window end */
 }
